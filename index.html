@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>StackyChair.com</title>
+    <style>
+      a img { border:none; }
+      .verticalhorizontal {
+        display: table-cell;
+        height: 600px;
+        text-align: center;
+        width: 600px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="verticalhorizontal">
+      <script type="text/javascript">
+        var random_images_array = ["1.PNG", "2.PNG", "3.PNG", "4.PNG", "5.PNG"];
+        function getRandomImage(imgAr, path) {
+          path = path || 'images/'; // default path here
+          var num = Math.floor( Math.random() * imgAr.length );
+          var img = imgAr[ num ];
+          var imgStr = '<img src="' + path + img + '" alt = "">';
+          document.write(imgStr); document.close();
+        }
+        getRandomImage(random_images_array, '/images/');
+      </script>
+      <noscript>
+        <img src="/images/1.PNG" alt="" />
+      </noscript>
+    </div>
+  </body>
+</html>
